@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0898D6D1DA830C6003FDB0C /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0898D6B1DA82F8F003FDB0C /* Tools.swift */; };
 		_LinkFileRef_CHTTPParser_via_Kitura /* CHTTPParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CHTTPParser" /* CHTTPParser.framework */; };
 		_LinkFileRef_CHTTPParser_via_KituraNet /* CHTTPParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CHTTPParser" /* CHTTPParser.framework */; };
 		_LinkFileRef_CHTTPParser_via_Rando /* CHTTPParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "_____Product_CHTTPParser" /* CHTTPParser.framework */; };
@@ -186,6 +187,7 @@
 		E0898D601DA7E957003FDB0C /* femaleFirstNames */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = femaleFirstNames; sourceTree = "<group>"; };
 		E0898D611DA7E957003FDB0C /* maleFirstNames */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = maleFirstNames; sourceTree = "<group>"; };
 		E0898D621DA7E957003FDB0C /* surnames */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = surnames; sourceTree = "<group>"; };
+		E0898D6B1DA82F8F003FDB0C /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		__PBXFileRef_Package.swift /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		"__PBXFileRef_Packages/CHTTPParser-0.3.0/Sources/CHTTPParser/http_parser.c" /* http_parser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = http_parser.c; sourceTree = "<group>"; };
 		"__PBXFileRef_Packages/CHTTPParser-0.3.0/Sources/CHTTPParser/utils.c" /* utils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = utils.c; sourceTree = "<group>"; };
@@ -576,6 +578,7 @@
 				__PBXFileRef_Sources/Name.swift /* Name.swift */,
 				__PBXFileRef_Sources/Person.swift /* Person.swift */,
 				__PBXFileRef_Sources/RandomGenerator.swift /* RandomGenerator.swift */,
+				E0898D6B1DA82F8F003FDB0C /* Tools.swift */,
 			);
 			name = Rando;
 			path = Sources;
@@ -954,6 +957,7 @@
 				__src_cc_ref_Sources/Extensions.swift /* Extensions.swift in Sources */,
 				__src_cc_ref_Sources/main.swift /* main.swift in Sources */,
 				__src_cc_ref_Sources/Name.swift /* Name.swift in Sources */,
+				E0898D6D1DA830C6003FDB0C /* Tools.swift in Sources */,
 				__src_cc_ref_Sources/Person.swift /* Person.swift in Sources */,
 				__src_cc_ref_Sources/RandomGenerator.swift /* RandomGenerator.swift in Sources */,
 			);

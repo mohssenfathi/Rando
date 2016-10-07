@@ -77,7 +77,7 @@ extension RandomGenerator {
         person.gender = firstName.gender
         
         // Set middle name. Maybe
-        let i = Double(arc4random()) / Double(UInt32.max)
+        let i = Tools.random(between: 0.0, and: 1.0)
         if i > 0.5 {
             person.middleName = allFirstNames.random().name.capitalized
         } else if i > 0.75 {
@@ -103,7 +103,7 @@ extension RandomGenerator {
         }
         
         let age = Double(randomNumber(distribution: distribution)) * 4.0
-        let increment = Double(arc4random()) / Double(UInt32.max)
+        let increment = Double(Tools.random(between: 0.0, and: 1.0))
         
         return age + increment
     }
@@ -111,7 +111,7 @@ extension RandomGenerator {
     func randomNumber(distribution: [Double]) -> Int {
         
         let sum = distribution.reduce(0, +)
-        let rnd = sum * Double(arc4random_uniform(UInt32.max)) / Double(UInt32.max)
+        let rnd = sum * Double(Tools.random(between: 0.0, and: 1.0))
         
         var accum = 0.0
         for (i, p) in distribution.enumerated() {
@@ -133,13 +133,13 @@ extension RandomGenerator {
     func saveNames() {
         
         var names = parseNames(file: basePath + "male.txt", gender: .male, nameType: .first)
-        NSKeyedArchiver.archiveRootObject(names, toFile: basePath + "maleFirstNames")
+        _ = NSKeyedArchiver.archiveRootObject(names, toFile: basePath + "maleFirstNames")
         
         names = parseNames(file: basePath + "female.txt", gender: .female, nameType: .first)
-        NSKeyedArchiver.archiveRootObject(names, toFile: basePath + "femaleFirstNames")
+        _ = NSKeyedArchiver.archiveRootObject(names, toFile: basePath + "femaleFirstNames")
         
         names = parseNames(file: basePath + "surnames.txt", gender: .neither, nameType: .last)
-        NSKeyedArchiver.archiveRootObject(names, toFile: basePath + "surnames")
+        _ = NSKeyedArchiver.archiveRootObject(names, toFile: basePath + "surnames")
     }
     
     func readNames(file: String) -> [Name] {
