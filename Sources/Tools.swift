@@ -7,20 +7,20 @@
 //
 
 #if os(Linux)
-//    import GlibC
-#else
-    import Foundation
+    import Glibc
 #endif
+
+import Foundation
 
 public
 class Tools: NSObject {
 
-    public class func random(between min: Float, and max: Float) -> Float {
+    public class func rand(between min: Float, and max: Float) -> Float {
         
         #if os(Linux)
-            return Float(random() % (max + 1)) + min
+            return Float(random() % Int(max) + 1) + min
         #else
-            return Float(arc4random() / UInt32.max) * max + min
+            return Float(arc4random()) / Float(UInt32.max) * max + min
         #endif
     }
     

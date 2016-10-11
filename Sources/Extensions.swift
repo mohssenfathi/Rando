@@ -12,7 +12,7 @@ public
 extension Array {
 
     func random() -> Iterator.Element {
-        let i = Int(arc4random_uniform(UInt32(count)) + 1)
+        let i = Int(Tools.rand(between: 0.0, and: Float(count + 1)))
         return self[i]
     }
     

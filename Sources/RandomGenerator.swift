@@ -77,7 +77,7 @@ extension RandomGenerator {
         person.gender = firstName.gender
         
         // Set middle name. Maybe
-        let i = Tools.random(between: 0.0, and: 1.0)
+        let i = Tools.rand(between: 0.0, and: 1.0)
         if i > 0.5 {
             person.middleName = allFirstNames.random().name.capitalized
         } else if i > 0.75 {
@@ -103,7 +103,7 @@ extension RandomGenerator {
         }
         
         let age = Double(randomNumber(distribution: distribution)) * 4.0
-        let increment = Double(Tools.random(between: 0.0, and: 1.0))
+        let increment = Double(Tools.rand(between: 0.0, and: 1.0))
         
         return age + increment
     }
@@ -111,7 +111,7 @@ extension RandomGenerator {
     func randomNumber(distribution: [Double]) -> Int {
         
         let sum = distribution.reduce(0, +)
-        let rnd = sum * Double(Tools.random(between: 0.0, and: 1.0))
+        let rnd = sum * Double(Tools.rand(between: 0.0, and: 1.0))
         
         var accum = 0.0
         for (i, p) in distribution.enumerated() {
